@@ -8,7 +8,7 @@ def get_key_pair(bits):
     q = getPrime(bits)
     n = p * q
     phi = (p - 1) * (q - 1)
-    e = random.randrange(1, phi)
+    e = 65537
     gcd = math.gcd(e, phi)
     while gcd != 1:
         e = random.randrange(1, phi)
