@@ -1,51 +1,445 @@
-この度は「触手ぱんつ配信２　自称異世界人の変態女」をお買い上げいただきありがとうございます。
+Skip to main content
+Stack Overflow
+About
+Products
+OverflowAI
+Search…
+Share Your Experience: Take the 2024 Developer Survey
+Home
+Questions
+Tags
+Users
+Companies
+LABS
+Jobs
+NEW
+Discussions
+COLLECTIVES
+Communities for your favorite technologies. Explore all Collectives
 
+TEAMS
 
+Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
 
+ 
+AttributeError: module 'pkgutil' has no attribute 'ImpImporter'. Did you mean: 'zipimporter'?
+Asked 6 months ago
+Modified 12 days ago
+Viewed 122k times
+102
 
-■トラックリスト
+Earlier I installed some packages like Matplotlib, NumPy, pip (version 23.3.1), wheel (version 0.41.2), etc., and did some programming with those. I used the command C:\Users\UserName>pip list to find the list of packages that I have installed, and I am using Python 3.12.0 (by employing code C:\Users\UserName>py -V).
 
-0. プロローグ(03:14)
-初配信です。
+I need to use pyspedas to analyse some data. I am following the instruction that that I received from site to install the package, with a variation (I am not sure whether it matters or not: I am using py, instead of python). The commands that I use, in the order, are:
 
-1. 寸止めオナニー(23:42)
-配信での初オナニー。
-寸止めオナニーでイった後、ニーソでクリを磨いてお仕置きします。
+py -m venv pyspedas
+.\pyspedas\Scripts\activate
+pip install pyspedas
+After the last step, I am getting the following output:
 
-2. 触手ぱんつ配信１回目(24:00)
-「誰かからイク許可を貰うまで」寸止めし続けます。結局失敗して触手にお仕置きされます。
+Collecting pyspedas
+  Using cached pyspedas-1.4.47-py3-none-any.whl.metadata (14 kB)
+Collecting numpy>=1.19.5 (from pyspedas)
+  Using cached numpy-1.26.1-cp312-cp312-win_amd64.whl.metadata (61 kB)
+Collecting requests (from pyspedas)
+  Using cached requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting geopack>=1.0.10 (from pyspedas)
+  Using cached geopack-1.0.10-py3-none-any.whl (114 kB)
+Collecting cdflib<1.0.0 (from pyspedas)
+  Using cached cdflib-0.4.9-py3-none-any.whl (72 kB)
+Collecting cdasws>=1.7.24 (from pyspedas)
+  Using cached cdasws-1.7.43.tar.gz (21 kB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting netCDF4>=1.6.2 (from pyspedas)
+  Using cached netCDF4-1.6.5-cp312-cp312-win_amd64.whl.metadata (1.8 kB)
+Collecting pywavelets (from pyspedas)
+  Using cached PyWavelets-1.4.1.tar.gz (4.6 MB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... error
+  error: subprocess-exited-with-error
 
-3. 触手ぱんつ配信２回目(24:24)
-リスナーに触手の操作を委ね、興味本位でイケなくなるお薬を飲みます。
-空(から)イキ(=イケない状態でイこうとする)を繰り返した後に深イキし、理性が溶けます。
+  × Getting requirements to build wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [33 lines of output]
+      Traceback (most recent call last):
+        File "C:\Users\UserName\pyspedas\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 353, in <module>
+          main()
+        File "C:\Users\UserName\pyspedas\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 335, in main
+          json_out['return_val'] = hook(**hook_input['kwargs'])
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\UserName\pyspedas\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 112, in get_requires_for_build_wheel
+          backend = _build_backend()
+                    ^^^^^^^^^^^^^^^^
+        File "C:\Users\UserName\pyspedas\Lib\site-packages\pip\_vendor\pyproject_hooks\_in_process\_in_process.py", line 77, in _build_backend
+          obj = import_module(mod_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+        File "C:\Users\UserName\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py", line 90, in import_module
+          return _bootstrap._gcd_import(name[level:], package, level)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "<frozen importlib._bootstrap>", line 1381, in _gcd_import
+        File "<frozen importlib._bootstrap>", line 1354, in _find_and_load
+        File "<frozen importlib._bootstrap>", line 1304, in _find_and_load_unlocked
+        File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+        File "<frozen importlib._bootstrap>", line 1381, in _gcd_import
+        File "<frozen importlib._bootstrap>", line 1354, in _find_and_load
+        File "<frozen importlib._bootstrap>", line 1325, in _find_and_load_unlocked
+        File "<frozen importlib._bootstrap>", line 929, in _load_unlocked
+        File "<frozen importlib._bootstrap_external>", line 994, in exec_module
+        File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+        File "C:\Users\UserName\AppData\Local\Temp\pip-build-env-_lgbq70y\overlay\Lib\site-packages\setuptools\__init__.py", line 16, in <module>
+          import setuptools.version
+        File "C:\Users\UserName\AppData\Local\Temp\pip-build-env-_lgbq70y\overlay\Lib\site-packages\setuptools\version.py", line 1, in <module>
+          import pkg_resources
+        File "C:\Users\UserName\AppData\Local\Temp\pip-build-env-_lgbq70y\overlay\Lib\site-packages\pkg_resources\__init__.py", line 2191, in <module>
+          register_finder(pkgutil.ImpImporter, find_on_path)
+                          ^^^^^^^^^^^^^^^^^^^
+      AttributeError: module 'pkgutil' has no attribute 'ImpImporter'. Did you mean: 'zipimporter'?
+      [end of output]
 
-4. 相互寸止めオナニー(20:49)
-リスナーと1:1でライブチャット。一緒に寸止めし、一緒にイき、一緒に直後責めをします。
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: subprocess-exited-with-error
 
-5. 末路(14:26)
-変態おま○こ遊びを繰り返した痴女の末路。制作者イチ推しトラック。
+× Getting requirements to build wheel did not run successfully.
+│ exit code: 1
+╰─> See above for output.
 
+note: This error originates from a subprocess, and is likely not a problem with pip.
+After little bit of googling, I came to know that this issues was reported at multiple places, but none for this package. I did install wheel in the new environment as mentioned in the answer here, but the problem still persists.
 
+Instead of setting up a virtual environment, I simply executed the command py -m pip install pyspedas. But I am still getting the error.
 
+What I could gather is that the program has an issue with
 
-■各トラックのおすすめ抜きポイント
+Collecting pywavelets (from pyspedas)
+  Using cached PyWavelets-1.4.1.tar.gz (4.6 MB)
+  Installing build dependencies ... done
+I am using IDLE in Windows 11.
 
-トラック１…20:55、絶頂
-トラック２…19:04、寸止め失敗で絶頂
-トラック３…21:56、深イキ
-トラック４…16:49、一緒に「ゼロ」に合わせてクリチ○ポ射精
-トラック５…11:22、戻れなくなる深イキ
+pythonpython-3.xpip
+Share
+Improve this question
+Follow
+edited Jan 7 at 4:34
+Peter Mortensen's user avatar
+Peter Mortensen
+31.2k2222 gold badges109109 silver badges132132 bronze badges
+asked Oct 26, 2023 at 6:22
+sreeraj t's user avatar
+sreeraj t
+1,30122 gold badges1212 silver badges1818 bronze badges
+Add a comment
+7 Answers
+Sorted by:
 
+Highest score (default)
+131
 
+AttributeError: module 'pkgutil' has no attribute 'ImpImporter'. Did you mean: 'zipimporter'?
 
+Due to the removal of the long-deprecated pkgutil.ImpImporter class, the pip command may not work for Python 3.12.
 
-■クレジット
-声　：麦チョコごはん様  https://twitter.com/nuyb9qx8mmywcbg
-絵　：まめ猫様　　　    https://twitter.com/mameneko_funyaa
-制作：もぷもぷ実験室　  https://twitter.com/mopumopulab
+You just have to manually install pip for Python 3.12
 
+python -m ensurepip --upgrade
+python -m pip install --upgrade setuptools
+python -m pip install <module>
+There are a couple of methods to fix this. In your virtual environment:
 
+pip install --upgrade setuptools
+Python comes with an ensurepip, which can install pip in a Python environment.
 
+https://pip.pypa.io/en/stable/installation/
 
-もぷもぷ実験室では「あまあまだが容赦ない責め」をコンセプトに幅広いシチュエーションの作品を作っています。
-気に入っていただけた方はサークル、twitterのフォローをよろしくお願いします！
+On Linux/macOS terminal:
+
+python -m ensurepip --upgrade
+On Windows:
+
+py -m ensurepip --upgrade
+also, make sure to upgrade pip:
+
+py -m pip install --upgrade pip
+As @Arthur mentioned in their answer for Ubuntu
+
+sudo apt install python3.12-dev
+or
+
+python3.12 -m pip install --upgrade setuptools
+Share
+Improve this answer
+Follow
+edited May 5 at 7:24
+answered Oct 26, 2023 at 6:32
+Talha Tayyab's user avatar
+Talha Tayyab
+17.9k4141 gold badges5757 silver badges8181 bronze badges
+Thanks for the response. I executed the commands C:\Users\UserName>pip -V & C:\Users\UserName>py -m ensurepip --upgrade, whose response was pip 23.3.1 from C:\Users\UserName\AppData\Local\Programs\Python\Python312\Lib\site-packages\pip (python 3.12) and Looking in links: c:\Users\UserName\AppData\Local\Temp\tmp23bccewt Requirement already satisfied: pip in c:\users\UserName\appdata\local\programs\python\python312\lib\site-packages (23.3.1). But the problem still persists. – 
+sreeraj t
+ Oct 26, 2023 at 8:49 
+1
+I sincerely appreciate all your help. I executed the commands in the following order: pip install --upgrade virtualenv --> virtualenv venv123 --python=python3.12 --> venv123\Scripts\activate.bat --> pip install pyspedas. But still persists. Do you think that installing an older version will solve the issue? – 
+sreeraj t
+ Oct 26, 2023 at 11:09
+2
+python3.12 -m pip install --upgrade setuptools solved it for me, Ubuntu 22.04. – 
+Leo77
+ Dec 28, 2023 at 10:38
+8
+how is python still so broken? i spend 90% of my time chasing down stuff like this in any one of the 15 package managers supposedly there ot make my life easier. Just an awful experience trying to use any of this freeware garbage – 
+RichyRoo
+ Mar 3 at 22:58
+1
+Adding setuptools to the Pipfile seemed to fix this on one occasion. – 
+andrewdotn
+ Mar 20 at 15:51 
+Show 1 more comment
+16
+
+My problem was listing older version of NumPy in requirements.txt, which may be obvious problem, but for people stuck with this:
+
+Check for the newer versions of NumPy. I needed to list it as:
+
+numpy~=1.26.4
+Share
+Improve this answer
+Follow
+edited Apr 19 at 2:26
+Peter Mortensen's user avatar
+Peter Mortensen
+31.2k2222 gold badges109109 silver badges132132 bronze badges
+answered Mar 29 at 9:52
+Banik's user avatar
+Banik
+54577 silver badges1212 bronze badges
+2
+this is what worked for 3.12.xx – 
+user2290820
+ May 12 at 15:03
+Thank you! worked for me as well (3.12.3) – 
+Irgendniemand
+ May 16 at 13:54
+Add a comment
+8
+
+Python has removed some previously deprecated symbols in the importlib. This is mentioned in the Python 3.12 release notes
+
+Many previously deprecated cleanups in importlib have now been completed:
+
+...
+
+importlib.abc.Finder, pkgutil.ImpImporter, and pkgutil.ImpLoader have been removed. (Contributed by Barry Warsaw in gh-98040.)
+The error message means that something tries to use the removed pkgutil.ImpImporter during package install. This something may be either pip, setuptools, or the setup.py install script in the package itself. Looking at the stacktrace, upgrading setuptools (inside virtual environment if you use virtual environment) should fix this.
+
+Also note this related release notes entry in 3.12
+
+gh-95299: Do not pre-install setuptools in virtual environments created with venv. This means that distutils, setuptools, pkg_resources, and easy_install will no longer available by default; to access these run pip install setuptools in the activated virtual environment.
+
+Share
+Improve this answer
+Follow
+edited Feb 6 at 14:22
+answered Nov 11, 2023 at 15:06
+user7610's user avatar
+user7610
+27.4k1616 gold badges137137 silver badges158158 bronze badges
+Add a comment
+5
+
+As others have commented, the issue is Python 3.12 being incompatible with the version of pip.
+
+My initial solution was:
+
+python -m ensurepip --upgrade
+pip3.12 install ...
+where ... was the package wanting to be installed.
+
+This was an incomplete solution as my IDE (PyCharm) was still throwing the same error opening other files.
+
+The below code upgraded the pip version globally:
+
+py -m pip install --upgrade pip
+I then followed this with refreshing my IDE. This is currently working.
+
+Further update: I have resorted to using a conda environment.
+
+Share
+Improve this answer
+Follow
+edited May 9 at 20:24
+answered Mar 28 at 23:38
+rd5201's user avatar
+rd5201
+8811 silver badge44 bronze badges
+Add a comment
+4
+
+What did work for me on Ubuntu 22.04 (Jammy Jellyfish) was installing the development header files for Python 3.12.
+
+sudo apt install python3.12-dev
+After that, everything went well.
+
+Everything else didn't work for me, because upgrading any package on existing Python 3.12 virtual environment would result into the same error. After installing the python3.12-dev both pip and setuptools were fresh.
+
+Share
+Improve this answer
+Follow
+edited Jan 7 at 4:49
+Peter Mortensen's user avatar
+Peter Mortensen
+31.2k2222 gold badges109109 silver badges132132 bronze badges
+answered Nov 19, 2023 at 21:31
+Artur Barseghyan's user avatar
+Artur Barseghyan
+13.6k55 gold badges5454 silver badges4545 bronze badges
+Add a comment
+2
+
+I recently had this same issue as I only just installed 3.12 on a venv and encountered the issue. Some of the suggestions above worked for me. For information, I'm using Windows and PyCharm for my development.
+
+Every time I tried to install a package on this fresh 3.12 installation, I got the same attribute error. To fix it, I did the following.
+
+From the terminal inside PyCharm:
+
+python -m ensurepip --upgrade
+python -m pip install --upgrade setuptools
+python -m pip install <module>
+One thing I've noticed over previous versions is that, at least on however mine is set up, the python -m as a prefix to pip is now mandatory, whereas before I could just go straight to a pip install <module> command. This may be down to something different in my setup or it could be due to a force from 3.12...
+
+Share
+Improve this answer
+Follow
+edited Apr 19 at 2:17
+Peter Mortensen's user avatar
+Peter Mortensen
+31.2k2222 gold badges109109 silver badges132132 bronze badges
+answered Mar 17 at 12:44
+Neodreadlord's user avatar
+Neodreadlord
+6299 bronze badges
+python -m ensurepip --upgrade work as the only solution that worked. – 
+Son Goku ssj4
+ Apr 14 at 16:29
+python -m ensurepip --upgrade is already mentioned in the accepted answer stackoverflow.com/a/77364602/13086128 – 
+Talha Tayyab
+ Apr 25 at 13:09 
+Add a comment
+0
+
+I recently had this same issue as I only just installed 3.12. This solution worked for me. Because I have an old version of pandas in the dependencies package, I only had to update the Pandas version because it was not compatible with Python 3.12, and everything worked smoothly
+
+Share
+Improve this answer
+Follow
+answered Mar 21 at 9:56
+la-Quica's user avatar
+la-Quica
+1
+in my case , just upgrade numpy to 1.26.4 . other solvations not work – 
+hn_tired
+ May 5 at 19:16
+Add a comment
+Highly active question. Earn 10 reputation (not counting the association bonus) in order to answer this question. The reputation requirement helps protect this question from spam and non-answer activity.
+Not the answer you're looking for? Browse other questions tagged pythonpython-3.xpip or ask your own question.
+The Overflow Blog
+The Good, the Bad, and the Disruptive: Let us know where you stand in the...
+How to train your dream machine
+Featured on Meta
+Our Partnership with OpenAI
+What deliverables would you like to see out of a working group?
+The [price] tag is being burninated
+Policy: Generative AI (e.g., ChatGPT) is banned
+The 2024 Developer Survey Is Live
+Linked
+0
+Why do i always get this attribute error whever i use the pip command
+0
+i think its a import error correct me if i'm wrong
+0
+I have Python 3.12 installed, but I'm encountering an issue with installing the "scikit-fmm" package. Could you assist me with resolving this?
+-1
+Problems installing stable-baselines3[extra]
+1
+Flask/Python: localhost => ok, Heroku => error
+0
+Error deploying python flask app on heroku
+0
+AttributeError:module 'pkgutil' has no attribute 'ImpImporter'.Did you mean: 'zipimporter'? Getting requirement to build wheel did not run successfull
+1
+I downloaded Python 3.12, but I'm unable to install CatBoost and Jieba using pip
+1
+Error in installing the package wordcloud in python
+264
+What is the meaning of "Failed building wheel for X" in pip install?
+See more linked questions
+Related
+2446
+How to check if an object has an attribute?
+6
+MacOS: ModuleNotFoundError: No module named '_ctypes'
+2
+Clean workaround for Pip issues under PyCharm that won't entail direct CLI access
+1
+Metadata error when installing "pyqt6-tools"
+Hot Network Questions
+Paper rejected twice, once because it proved two true statements imply each other, once because it proved two false statements imply each other?
+Could ghosts be an airborne species of octopus?
+Can the reactance on a transformer load, be "corrected" on the transformer primary, to improve transformer efficiency?
+What's the meaning of 'cold' in the CDM model?
+In US Patents, is a novel "realization" or discovery in itself patentable; in such cases can/do multiple methods/apparatus form the SAME patent?
+Stealth In Space Calculator
+How is a watchdog timer and the main loop related?
+How to create a crossword based on a 16 letter theme
+I want to move an object but all that gets moved is a little orange dot than seems it´s pivot, help!
+Steenrod powers of the Thom class
+Why do Shapley value solutions remain consistent when the value function of the empty set changes in the ML context?
+Anxious about possibly hitting bugs i can't solve and having to cancel my games
+I want to know the tricks to search for and find old academic journals for free
+How can my blue and black deck return enchantments from the graveyard?
+Is it an offense to photograph a seahorse?
+What are the minimum system requirements to run GW-BASIC?
+What is the difference in the usage of the verbs "lernen" and "studieren"?
+A silly entry: different sizes for "True" or "False" boxes in a test
+What is the fastest static comparison sort? What is the proper term for "static"?
+tips for future philosophy student
+Are circles required on the edge of the grid?
+My other Mac mini's clipboard history has my laptop's clipboard history and it's freaking me out
+Hoop, Hoop, Hoop, Hoop, Eye-Eye-Eye-Eye
+What is Israel and the international community doing to compensate the (newly declared--May, 2024) lack of Egyptian cooperation in re aid to Gaza?
+ Question feed
+
+STACK OVERFLOW
+Questions
+Help
+PRODUCTS
+Teams
+Advertising
+Collectives
+Talent
+COMPANY
+About
+Press
+Work Here
+Legal
+Privacy Policy
+Terms of Service
+Contact Us
+Cookie Settings
+Cookie Policy
+STACK EXCHANGE NETWORK
+Technology
+Culture & recreation
+Life & arts
+Science
+Professional
+Business
+API
+Data
+Blog
+Facebook
+Twitter
+LinkedIn
+Instagram
+Site design / logo © 2024 Stack Exchange Inc; user contributions licensed under CC BY-SA. rev 2024.5.21.9550
+

@@ -1,4 +1,4 @@
-BLOCK_SIZE = 64
+BLOCK_SIZE = 128//8
 LOOP = 8
 
 
